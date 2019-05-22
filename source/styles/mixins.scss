@@ -1,0 +1,23 @@
+@mixin draw-progress($progress, $color) {
+	.chart-pie__pie {
+		.chart-pie__half-circle {
+			border-color: $color;
+		}
+
+		.chart-pie__left-side {
+			transform: rotate($progress * 3.6deg);
+		}
+
+		@if $progress <= 50 {
+			.chart-pie__right-side {
+				display: none;
+			}
+		} @else {
+			clip: rect(auto, auto, auto, auto);
+
+			.chart-pie__right-side {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

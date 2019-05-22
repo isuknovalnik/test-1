@@ -1,0 +1,132 @@
+.header {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: transparent;
+
+	&--fixed {
+		position: fixed;
+		background-color: rgba(255,255,255,0.9);
+	}
+
+	.mob-active & {
+		background-color: $page-color;
+
+		@media (min-width: $narrow-tablet) {
+			background-color: transparent;
+		}
+	}
+
+	.mob-active &--fixed {
+		@media (min-width: $narrow-tablet) {
+			background-color: rgba(255,255,255,0.9);
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: calc(100% - 20px);
+		max-width: $content-max-width;
+		height: 94px;
+		margin: 0 auto;
+
+		@media (min-width: $mob) {
+			width: calc(100% - 40px);
+			height: 114px;
+		}
+	
+ 	    @media (min-width: $narrow-tablet) {
+			height: 124px;
+		}
+	}
+
+	&--fixed &__wrap {
+		height: 54px;
+
+		@media (min-width: $mob) {
+			height: 74px;
+		}
+	
+		@media (min-width: $narrow-tablet) {
+			height: 84px;
+		}
+	}
+
+	.mob-active &--fixed &__wrap {
+		height: 94px;
+
+		@media (min-width: $mob) {
+			height: 114px;
+		}
+	
+ 	    @media (min-width: $narrow-tablet) {
+			height: 84px;
+		}
+	}
+
+	&__nav-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		margin-right: -8px;
+		font-size: 0;
+		color: $n1-blue;
+		transition: opacity 0.3s, color 0.3s;
+  
+		@media (min-width: $mob) {
+			margin-right: -2px;
+		}
+
+		@media (min-width: $narrow-tablet) {
+		  display: none;
+		}
+	
+		&:hover {
+			color: $button-hover;
+		}
+	
+		&:active {
+			opacity: 0.7;
+		}
+	}
+
+	&__nav-symbol {
+		fill: currentColor;
+
+		&--burger {
+			width: 24px;
+			height: 16px;
+
+			@media (min-width: $mob) {
+				width: 35px;
+				height: 24px;
+			}
+		}
+
+		&--cross {
+			display: none;
+			width: 18px;
+			height: 18px;
+
+			@media (min-width: $mob) {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&__nav-btn--active &__nav-symbol--burger {
+		display: none;
+	}
+
+	&__nav-btn--active &__nav-symbol--cross {
+		display: block;
+	}
+}

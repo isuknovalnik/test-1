@@ -1,0 +1,65 @@
+.button {
+	display: block;
+	height: 43px;
+	padding: 0 30px;
+	font-family: $roboto;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	color: $light-text;
+	background-color: $n1-blue;
+	border-radius: 26px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: opacity 0.3s, background-color 0.3s;
+
+	&:hover {
+		background-color: $button-hover;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+
+	&--link {
+		line-height: 43px;
+		text-decoration: none;
+	}
+
+	&--mob-short {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		font-size: 0;
+		border-radius: 50%;
+
+		@media (min-width: $mob) {
+			display: block;
+			width: 144px;
+			height: 43px;
+			padding: 0 30px;
+			font-size: 14px;
+			border-radius: 26px;
+		}
+	}
+
+	&__symbol {
+		display: none;
+		width: 20px;
+		height: 20px;
+		fill: currentColor;
+	}
+
+	&--mob-short &__symbol {
+		display: block;
+
+		@media (min-width: $mob) {
+			display: none;
+		}
+	}
+}

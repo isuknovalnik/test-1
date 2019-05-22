@@ -1,0 +1,18 @@
+doctype html
+html(lang='ru')
+	- var pageTitle = 'all pages';
+	include templates/head.pug
+
+	body
+		ul
+			li
+				a(href="main.html")
+					|main.html
+				|
+				| ----- Главная
+			li
+				a(href="error.html")
+					|error.html
+				|
+				| ----- error
+

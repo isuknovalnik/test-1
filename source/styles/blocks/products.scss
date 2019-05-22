@@ -1,0 +1,129 @@
+.products {
+	padding-top: 60px;
+
+	@media (min-width: $mob) {
+		padding-top: 89px;
+	}
+
+	&__icon {
+		margin: 0 auto 14px;
+	}
+
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__intro {
+		width: calc(100% - 20px);
+		max-width: 620px;
+		margin: 0 auto 40px;
+
+		@media (min-width: $mob) {
+			width: calc(100% - 40px);
+		}
+	}
+
+	&__slider-wrap {
+		position: relative;
+		padding: 28px 0 78px;
+		background-repeat: no-repeat;
+		background-position: -354px top;
+		background-size: 555px 504px;
+		background-image: url('../img/products-back.png');
+
+		@media (min-width: 560px) {
+			padding: 53px 0;
+			background-position: -264px top;
+		}
+
+		@media (min-width: $mob) {
+			background-position: -204px top;
+		}
+
+		@media (min-width: $content-max-width) {
+			background-repeat: no-repeat, no-repeat;
+			background-position: calc(50% - 441px) top, left top;
+			background-size: 555px 504px, auto;
+			background-image: url('../img/products-back.png'), linear-gradient(to right, #263e5a 0, #263e5a calc(50% - 451px), transparent calc(50% - 450px), transparent 100%);
+		}
+	}
+
+	&__slider-nav-wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 127px;
+		left: 15px;
+		height: 108px;
+
+		@media (min-width: 560px) {
+			left: 60px;
+		}
+
+		@media (min-width: $mob) {
+			left: 80px;
+			height: 144px;
+		}
+
+		@media (min-width: 1108px) {
+			left: calc(50% - 442px);
+		}
+	}
+
+	&__slider-pagination {
+		position: absolute;
+		top: 432px;
+		left: 15px;
+		width: 170px;
+		font-family: $roboto;
+		font-size: 30px;
+		font-weight: 400;
+		color: #47678B;
+
+		@media (min-width: 560px) {
+			top: 378px;
+		}
+
+		@media (min-width: $mob) {
+			left: 40px;
+			font-size: 36px;
+		}
+
+		@media (min-width: 1108px) {
+			left: calc(50% - 492px);
+			width: 200px;
+			font-size: 42px;
+		}
+	}
+
+	&__slider-pagination .swiper-pagination-current {
+		font-family: $roboto;
+		font-size: 48px;
+		color: $light-text;
+
+		@media (min-width: $mob) {
+			font-size: 64px;
+		}
+
+		@media (min-width: 1108px) {
+			font-size: 72px;
+		}
+	}
+
+	&__slider-int-wrap {
+		margin-left: 80px;
+
+		@media (min-width: 560px) {
+			margin-left: 170px;
+		}
+
+		@media (min-width: $mob) {
+			margin-left: 230px;
+		}
+
+		@media (min-width: $content-max-width) {
+			margin-left: calc(50% - 284px);
+		}
+	}
+}

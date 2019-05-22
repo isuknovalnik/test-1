@@ -1,0 +1,102 @@
+.main-nav {
+	margin: 0;
+	padding: 0;
+	display: none;
+
+	@media (min-width: $narrow-tablet) {
+		display: block;
+		position: static;
+		width: 52.48%;
+		margin-left: 3.8%;
+		background-color: transparent;
+	}
+
+	&--active {
+		display: block;
+		position: fixed;
+		z-index: 30;
+		top: 94px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(53, 74, 98, 0.5);
+
+		@media (min-width: $mob) {
+			top: 114px;
+		}
+	
+		@media (min-width: $narrow-tablet) {
+			display: block;
+			position: static;
+			background-color: transparent;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 300px;
+		height: 100%;
+		margin: 0;
+		padding: 20px;
+		list-style: none;
+		background-color: $page-color;
+
+		@media (min-width: $narrow-tablet) {
+			position: static;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: unset;
+			padding: 0;
+			background-color: transparent;
+		}
+	}
+
+	&__item {
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0 10px;
+
+		@media (min-width: $narrow-tablet) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item--active &__link {
+		cursor: default;
+		color: $n1-blue;
+	}
+
+	&__item:hover &__link {
+		color: $n1-blue;
+		border-color: $n1-blue;
+	}
+
+	&__item:active &__link {
+		opacity: 0.7;
+	}
+
+	&__item--active:hover &__link,
+	&__item--active:active &__link {
+		cursor: default;
+		text-decoration: none;
+		color: $n1-blue;
+		border-color: transparent;
+		opacity: 1;
+	}
+
+	&__link {
+		font-size: 15px;
+		font-weight: 400;
+		text-decoration: none;
+		color: $text-color;
+		border-bottom: 1px solid transparent;
+		transition: color 0.3s, border-color 0.3s;
+	}
+}

@@ -1,0 +1,21 @@
+.feature {
+	width: 129px;
+	margin: 0;
+	padding: 45px 0 0;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	color: $text-color;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	&--first {
+		background-size: 47px 33px;
+		background-image: url('../img/feature-1.svg');
+	}
+
+	&--responsive {
+		background-size: 52px 40px;
+		background-image: url('../img/feature-2.svg');
+	}
+}

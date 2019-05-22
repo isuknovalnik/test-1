@@ -1,0 +1,37 @@
+.tariffs-table-column {
+	width: 240px;
+
+	&--titles {
+		position: absolute;
+		z-index: 4;
+		top: -14px;
+		left: -14px;
+		width: 280px;
+
+		@media (min-width: 560px) {
+			z-index: unset;
+			flex-shrink: 0;
+			position: static;
+		}
+
+		@media (min-width: 1108px) {
+			width: 328px;
+		}
+	}
+
+	&--standard {
+		background-color: #F2F8FF;
+		border-left: 1px solid #E3E8EF;
+	}
+
+	&--optimal {
+		background-color: #F7F4FF;
+		border-left: 1px solid #E3E8EF;
+	}
+
+	&--premium {
+		background-color: #FFF1F8;
+		border-left: 1px solid #E3E8EF;
+	}
+
+}

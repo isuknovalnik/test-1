@@ -1,0 +1,517 @@
+doctype html
+html(lang='ru')
+	- var pageTitle = 'main page';
+	- var headerBtnText = 'модалка';
+	include templates/head.pug
+
+	body
+		div(style='height: 0; width: 0; position: absolute; visibility: hidden' class='symbols')
+			// inject:svg
+			// endinject
+
+		div.wrapper
+			include templates/header.pug
+			section.index-banner
+				div.index-banner__wrap
+					img(src="img/index-banner-icon.png" width="40" height="40" class="section-icon index-banner__icon" alt="Иконка")
+					h2.section-title.section-title--left
+						|Привет!
+					p.text.text--left.index-banner__intro
+						| Группа компаний Freematiq и MITRA
+						| ищет себе клевого верстальщика. На постоянную
+						| работу в офисе или периодическую  работу по удаленке.
+						| Хотим предложить тебе вместо скучных
+						| тестовых заданий – сверстать эту страницу.
+					p.text.text--left.text--bold.index-banner__list-title
+						|В своей работе мы используем:
+					ul.list.index-banner__list
+						li.list__item
+							|HTML5, CSS3
+						li.list__item
+							|Bootstrap 4
+						li.list__item
+							|Jade, Pug
+						li.list__item
+							|Less, SCSS
+						li.list__item
+							|Иконочные шрифты
+						li.list__item
+							|SVG иллюстрации
+					p.text.text--left.text--dark
+						|Не ограничиваем этими технологиями, верстай как удобно.
+		section.features
+			h2.visually-hidden Особенности задачи
+			p.text.features__intro
+				|Это твое первое задание в нашей компании.
+				| Если оно покажется тебе интересным и его реализация
+				| нам понравится – добро пожаловать в команду.
+			div.features__wrap
+				p.feature.feature--first
+					|Первый блок на всю высоту экрана
+				p.feature.feature--responsive
+					|Отзывчивая верстка
+
+		section.how-to
+			div.how-to__wrap
+				img(src="img/how-to-icon.png" width="40" height="40" class="section-icon how-to__icon" alt="Иконка")
+				h2.section-title.section-title--left Как ускорить процесс
+				p.text.text--left
+					|Чтобы иметь доступ ко всем функциям и возможностям
+					| Figma, которые облегчат и ускорят процесс верстки,
+					| зарегистрируйся и залогинься в системе.
+				a(href="#" class="button button--link how-to__button") Зарегистрироваться
+
+		section.estimate
+			div.estimate__left-wrap
+				img(src="img/estimate-icon.png" width="40" height="40" class="section-icon estimate__icon" alt="Иконка")
+				h2.section-title.section-title--light.section-title--small.section-title--left
+					|Оцени себя
+				p.text.text--left.text--light-grey
+					|Попробуй максимально объективно и честно оценить
+					| свои знания верстки по следующей шкале. И да, её
+					| тоже нужно сверстать.
+			div.estimate__right-wrap
+				div.estimate-chart
+					div.estimate-chart__wrap
+						span.estimate-chart__number 1
+						span.estimate-chart__text год
+					div.chart-pie.chart-pie--years
+						div.chart-pie__pie
+							div.chart-pie__left-side.chart-pie__half-circle
+							div.chart-pie__right-side.chart-pie__half-circle
+						div.chart-pie__shadow
+
+				div.estimate-chart
+					div.estimate-chart__wrap
+						span.estimate-chart__number 23
+						span.estimate-chart__text проекта
+					div.chart-pie.chart-pie--projects
+						div.chart-pie__pie
+							div.chart-pie__left-side.chart-pie__half-circle
+							div.chart-pie__right-side.chart-pie__half-circle
+						div.chart-pie__shadow
+
+			div.scale.estimate__slider
+				div.scale__bar
+					div.scale__thumb
+				div.scale__point Intern
+				div.scale__point Junior
+				div.scale__point Middle
+				div.scale__point Senior
+				div.scale__point Lead
+
+		section.products
+			img(src="img/products-icon.png" width="40" height="40" class="section-icon products__icon" alt="Иконка")
+			h2.section-title.section-title--small.products__title
+				|Сверстаешь такой слайдер?
+			p.text.products__intro
+				|Это не так сложно, на самом деле. Сложнее
+				| придумать как он будет адаптироваться. Различные
+				| модные эффекты так же будут оценены
+				| по достоинству.
+			div.products__slider-wrap
+				div.products__slider-nav-wrap
+					button(type="button" class="round-arrow products-control-next")
+						|след.
+						svg(width="21" height="15" class="round-arrow__symbol")
+							use(xlink:href="#arrow")
+
+					button(type="button" class="round-arrow round-arrow--prev products-control-prev")
+						|пред.
+						svg(width="21" height="15" class="round-arrow__symbol")
+							use(xlink:href="#arrow")
+
+				div.products__slider-pagination
+
+				div.products__slider-int-wrap.swiper-container
+					div.swiper-wrapper
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|New Balance 840 90s
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart.product-card__heart--active
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-2-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-2-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|New Balance 1500
+							p.product-card__text
+								|Встречайте новые расцветки
+								| бессмертной классики!
+							div.product-card__price-wrap
+								span.product-card__price 13 990 ₽
+								span.product-card__old-price 19 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--purple")
+									|фиолетовый
+								button(type="button" class="product-card__color product-card__color--black")
+									|черный
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-3-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-3-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-3-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|New Balance 997H
+							p.product-card__text
+								|В 1991 году New Balance представил
+								| миру модель 997, которая вывела
+								| линейку 99X на совершенно новый
+								| уровень технологий и эстетики
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--lilac")
+									|сиреневый
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--grey")
+									|серый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|New Balance 247
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|Slide 5
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart.product-card__heart--active
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|Slide 6
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|Slide 7
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|Slide 8
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+								
+						div.product-card.swiper-slide
+							div.product-card__img-wrap
+								img(src="img/product-1-1.jpg" width="204" class="product-card__img product-card__img--active" alt="Изображение товара")
+								img(src="img/product-1-2.jpg" width="204" class="product-card__img" alt="Изображение товара")
+								img(src="img/product-1-3.jpg" width="204" class="product-card__img" alt="Изображение товара")
+							p.product-card__title
+								|Slide 9
+							p.product-card__text
+								|840 90s Running объединили в себе
+								| спортивную эстетику и необходимый в
+								| городском ритме комфорт.
+							div.product-card__price-wrap
+								span.product-card__price 10 990 ₽
+								span.product-card__old-price 12 990 ₽
+							div.product-card__colors-wrap
+								span.product-card__colors-text Цвет:
+								button(type="button" class="product-card__color product-card__color--active product-card__color--red")
+									|красный
+								button(type="button" class="product-card__color product-card__color--blue")
+									|синий
+								button(type="button" class="product-card__color product-card__color--orange")
+									|оранжевый
+							button(type="button" class="product-card__plus-btn")
+									|+
+							span.product-card__heart.product-card__heart--active
+								svg(width="20" height="19" class="product-card__heart-symbol")
+									use(xlink:href="#heart")
+
+		section.tariffs
+			img(src="img/tariffs-icon.png" width="40" height="40" class="section-icon tariffs__icon" alt="Иконка")
+			h2.section-title.section-title--small
+				|Время таблиц
+			p.text.tariffs__intro
+				|Какой серьезный проект может обойтись без таблиц?
+				| Мы не сомневаемся, что ты умеешь их верстать,
+				| попробуй реализовать такую таблицу.
+			div.tariffs__table
+				div.tariffs__slider-nav-wrap
+					button(type="button" class="round-arrow round-arrow--tariffs tariffs-control-next")
+						|след.
+						svg(width="21" height="15" class="round-arrow__symbol")
+							use(xlink:href="#arrow")
+
+					button(type="button" class="round-arrow round-arrow--tariffs round-arrow--prev tariffs-control-prev")
+						|пред.
+						svg(width="21" height="15" class="round-arrow__symbol")
+							use(xlink:href="#arrow")
+
+				div.tariffs-table-column.tariffs-table-column--titles
+					div.tariffs-table-cell.tariffs-table-cell--heading
+
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Место на диске
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Количество проектов
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Пользователей в проекте
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Интерактивное редактирование
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Техническая поддержка (в сутки)
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Премиум ресурсы
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Отключение рекламы
+					div.tariffs-table-cell.tariffs-table-cell--titles
+						|Приложения для iOS и Android
+
+				div.tariffs__slider.swiper-container
+					div.swiper-wrapper
+						div.tariffs-table-column.tariffs-table-column--standard.swiper-slide
+							div.tariffs-table-cell.tariffs-table-cell--standard.tariffs-table-cell--heading
+								p.tariffs-table-cell__title
+									|Стандартный
+								p.tariffs-table-cell__heading-text
+									|Это самый стандартный тариф,
+									| который подойдет для новых
+									| пользователей
+
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|1 GB
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|1
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|2
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|1 час
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+
+						div.tariffs-table-column.tariffs-table-column--optimal.swiper-slide
+							div.tariffs-table-cell.tariffs-table-cell--optimal.tariffs-table-cell--heading
+								p.tariffs-table-cell__title
+									|Оптимальный
+								p.tariffs-table-cell__heading-text
+									|Это самый стандартный тариф,
+									| который подойдет для новых
+									| пользователей
+
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|5 GB
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|10
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|5
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--optimal")
+									use(xlink:href="#check-mark")
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|3 часа
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--optimal")
+									use(xlink:href="#check-mark")
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|—
+
+						div.tariffs-table-column.tariffs-table-column--premium.swiper-slide
+							div.tariffs-table-cell.tariffs-table-cell--premium.tariffs-table-cell--heading
+								p.tariffs-table-cell__title
+									|Премиум
+								p.tariffs-table-cell__heading-text
+									|Это самый стандартный тариф,
+									| который подойдет для новых
+									| пользователей
+
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|100 GB
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|∞
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|∞
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--premium")
+									use(xlink:href="#check-mark")
+							div.tariffs-table-cell.tariffs-table-cell--content
+								|12 часов
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--premium")
+									use(xlink:href="#check-mark")
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--premium")
+									use(xlink:href="#check-mark")
+							div.tariffs-table-cell.tariffs-table-cell--content
+								svg(width="16" height="12" class="tariffs-table-cell__check-symbol tariffs-table-cell__check-symbol--premium")
+									use(xlink:href="#check-mark")
+
+		section.ready
+			img(src="img/ready-icon.png" width="40" height="40" class="section-icon ready__icon" alt="Иконка")
+			h2.section-title.section-title--small.ready__title
+				|Всё готово? Высылай нам!
+			p.text.ready__intro
+				|Когда всё будет готово, высылай архив с версткой или
+				| ссылку на облачный файл на нашу почту, указав тему
+				| письма “Тестовое задание для верстальщиков”.
+			a(href="mailto:hr@freematiq.com" target="blank" class="ready__link") hr@freematiq.com
+
+		include templates/footer.pug
+		include templates/modal.pug
+
+		script(src='js/libs.min.js')
+		script(src='js/script.min.js')

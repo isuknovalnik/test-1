@@ -1,0 +1,33 @@
+.list {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 8px;
+		padding-left: 14px;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 18px;
+		color: $text-color;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 6px;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: $n1-blue;
+		}
+	}
+}

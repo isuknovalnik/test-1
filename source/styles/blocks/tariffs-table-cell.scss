@@ -1,0 +1,86 @@
+.tariffs-table-cell {
+	height: 50px;
+
+	&--heading {
+		height: 184px;
+		padding: 82px 18px 0;
+		background-repeat: no-repeat;
+		background-position: center 20px;
+		background-size: auto 52px;
+	}
+
+	&--standard {
+		background-image: url('../img/tariff-1.svg');
+	}
+
+	&--optimal {
+		background-image: url('../img/tariff-2.svg');
+	}
+
+	&--premium {
+		background-image: url('../img/tariff-3.svg');
+	}
+
+	&--titles {
+		padding-left: 20px;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 50px;
+		color: $grey-text;
+
+		@media (min-width: 560px) {
+			font-size: 15px;
+			font-weight: 400;
+			color: $text-color;
+			border-top: 1px solid #E3E8EF;
+		}
+	}
+
+	&--content {
+		padding-top: 20px;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 30px;
+		text-align: center;
+		color: $text-color;
+		border-top: 1px solid #E3E8EF;
+
+		@media (min-width: 560px) {
+			padding-top: 0;
+			line-height: 50px;
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 7px;
+		font-size: 20px;
+		font-weight: 400;
+		text-align: center;
+		color: $text-color;
+	}
+
+	&__heading-text {
+		padding: 0;
+		margin: 0;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 17px;
+		text-align: center;
+		color: $grey-text;
+	}
+
+	&__check-symbol {
+		width: 16px;
+		height: 12px;
+
+		&--optimal {
+			fill: #9570EE;
+		}
+
+		&--premium {
+			fill: #FF56A9;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.features {
+	min-width: 320px;
+	width: 100%;
+	max-width: 870px;
+	margin: 0 auto;
+	padding: 26px 10px 30px;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+
+	@media (min-width: 660px) {
+		padding: 26px calc(50% - 310px) 30px;
+	}
+
+	@media (min-width: 880px) {
+		padding: 26px 120px 30px;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		max-width: 310px;
+		margin: 0 auto;
+	}
+
+	&__intro {
+		margin-bottom: 28px;
+	}
+}

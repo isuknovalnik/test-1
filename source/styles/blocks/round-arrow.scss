@@ -1,0 +1,70 @@
+.round-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	font-size: 0;
+	color: $light-text;
+	background-color: transparent;
+	outline: none;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.35);
+	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+	@media (min-width: $mob) {
+		width: 60px;
+		height: 60px;
+	}
+
+	&:hover {
+		color: $text-color;
+		background-color: $light-text;
+		border-color: $light-text;
+	}
+	
+	&:active {
+		opacity: 0.6;
+	}
+
+	&--tariffs {
+		color: $light-text;
+		background-color: $n1-blue;
+		border-color: $n1-blue;
+
+		@media (min-width: $mob) {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	&--tariffs:hover {
+		color: $text-color;
+		background-color: $page-color;
+		border-color: $button-hover;
+	}
+	
+	&__symbol {
+		width: 15px;
+		height: 11px;
+		fill: currentColor;
+
+		@media (min-width: $mob) {
+			width: 21px;
+			height: 15px;
+		}
+	}
+
+	&--tariffs &__symbol {
+		@media (min-width: $mob) {
+			width: 17px;
+			height: 12px;
+		}
+	}
+
+	&--prev &__symbol {
+		transform: rotate(180deg);
+	}
+}

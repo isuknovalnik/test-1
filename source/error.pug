@@ -1,0 +1,37 @@
+doctype html
+html(lang='ru')
+	- var pageTitle = 'error 404';
+	- var headerBtnText = 'отправить';
+	- var modalText = 'А что отправить-то?';
+	include templates/head.pug
+
+	body
+		div(style='height: 0; width: 0; position: absolute; visibility: hidden' class='symbols')
+			// inject:svg
+			// endinject
+
+		div.error-page
+			include templates/header.pug
+
+			section.error-page__content
+				div.error-page__int-wrap
+					h2.section-title Страница не найдена
+					p.text
+						span.text__part
+							|К сожалению, такой страницы нет. Либо
+							| администратор сайта ее удалил,
+						span.text__space
+							| 
+						span.text__part
+							|либо ее никогда не существовало. Попробуйте проверить адрес
+						span.text__space
+							| 
+						span.text__part
+							|страницы или начните с Главной.
+					a(href="#" class="button button--link error-page__button") На главную
+
+			include templates/footer.pug
+			include templates/modal.pug
+
+		script(src='js/libs.min.js')
+		script(src='js/script.min.js')

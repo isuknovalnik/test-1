@@ -1,0 +1,130 @@
+.scale {
+	display: flex;
+	flex-direction: column;
+	width: 80px;
+	height: 188px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@media (min-width: 500px) {
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+	}
+
+	&__bar {
+		width: 6px;
+		height: 100%;
+		margin-right: 36px;
+		border-radius: 3px;
+		background-color: #23364C;
+
+		@media (min-width: 500px) {
+			width: 100%;
+			height: 6px;
+			margin-right: 0;
+			margin-bottom: 21px;
+		}
+	}
+
+	&__thumb {
+		position: relative;
+		width: 6px;
+		height: 28%;
+		border-radius: 3px;
+		background: linear-gradient(180deg, #BFA4FF 0.43%, #FF4F72 33.51%, #FFC359 70.96%);
+
+		@media (min-width: 500px) {
+			width: 28%;
+			height: 6px;
+			background: linear-gradient(90deg, #BFA4FF 0.43%, #FF4F72 33.51%, #FFC359 70.96%);
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			z-index: 2;
+			content: "";
+			bottom: -8px;
+			right: -5px;
+			width: 16px;
+			height: 16px;
+			background: #FFFFFF;
+			border-radius: 50%;
+			box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+
+			@media (min-width: 500px) {
+				bottom: unset;
+				top: -5px;
+				right: -8px;
+			}
+		}
+	}
+
+	&__point {
+		position: relative;
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 19px;
+		text-align: left;
+		color: $light-text;
+
+		@media (min-width: 500px) {
+			text-align: center;
+		}
+
+		&:after {
+			position: absolute;
+			z-index: 2;
+			content: "";
+			left: -16px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 3px;
+			height: 3px;
+			background: #FFFFFF;
+			border-radius: 50%;
+			opacity: 0.5;
+
+			@media (min-width: 500px) {
+				top: -6px;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+
+		&:nth-child(2) {
+			text-align: left;
+			margin-top: -8px;
+
+			@media (min-width: 500px) {
+				margin-top: 0;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: -8px;
+			text-align: left;
+
+			@media (min-width: 500px) {
+				margin-bottom: 0;
+				text-align: right;
+			}
+		}
+
+		&:nth-child(2):after {
+			@media (min-width: 500px) {
+				left: 0;
+				transform: unset;
+			}
+		}
+
+		&:last-child:after {
+			@media (min-width: 500px) {
+				right: 0;
+				left: unset;
+				transform: unset;
+			}
+		}
+	}
+}

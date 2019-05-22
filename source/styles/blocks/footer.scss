@@ -1,0 +1,48 @@
+.footer {
+	width: 100%;
+	border-top: 1px solid $border-color;
+
+	&__wrap {
+		width: calc(100% - 20px);
+		max-width: $content-max-width;
+		min-height: 56px;
+		margin: 0 auto;
+		padding: 20px 0;
+
+		@media (min-width: 580px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@media (min-width: $mob) {
+			width: calc(100% - 40px);
+		}
+	}
+
+	&__text {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 16px;
+		font-size: 13px;
+		font-weight: 400;
+		color: $grey-text;
+
+		@media (min-width: 580px) {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__link {
+		text-decoration: none;
+		color: $n1-blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+}

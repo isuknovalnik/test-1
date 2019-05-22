@@ -1,0 +1,56 @@
+.how-to {
+	width: calc(100% - 20px);
+	max-width: $content-max-width;
+	margin: 0 auto;
+	padding: 122px 0 82px;
+	background-repeat: no-repeat;
+	background-size: 200px auto;
+	background-position: 150px 20px;
+	background-image: url('../img/how-to-img.png');
+
+	@media (min-width: 440px) {
+		background-position: calc(50% + 40px) 20px;
+	}
+
+	@media (min-width: 660px) {
+		padding: 82px 0;
+		background-size: 40.94% auto;
+		background-position: 41px 111px;
+	}
+
+	@media (min-width: $mob) {
+		width: calc(100% - 40px);
+		padding: 102px 0;
+	}
+
+	@media (min-width: $narrow-tablet) {
+		padding: 122px 0;
+		background-position: 41px 81px;
+	}
+
+	@media (min-width: $tablet) {
+		background-size: 429px 319px;
+	}
+
+	&__wrap {
+		max-width: 350px;
+		margin: 0 auto;
+
+		@media (min-width: 660px) {
+			max-width: unset;
+			width: 42.94%;
+			margin: 0;
+			margin-left: 48.76%;
+		}
+	}
+
+	&__button {
+		width: 220px;
+		margin-top: 16px;
+	}
+
+	&__icon {
+		margin-left: 2px;
+		margin-bottom: 12px;
+	}
+}

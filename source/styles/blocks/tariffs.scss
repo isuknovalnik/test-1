@@ -1,0 +1,54 @@
+.tariffs {
+	width: calc(100% - 20px);
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 60px;
+
+	@media (min-width: $mob) {
+		width: calc(100% - 40px);
+		padding-top: 90px;
+	}
+
+	@media (min-width: 1108px) {
+		max-width: $content-max-width;
+	}
+
+	&__icon {
+		margin: 0 auto 14px;
+	}
+
+	&__intro {
+		max-width: 620px;
+		margin: 0 auto 23px;
+	}
+
+	&__table {
+		position: relative;
+		display: flex;
+		border: 1px solid #D7E1EC;
+	}
+
+	&__slider-nav-wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		z-index: 4;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 104px;
+
+		@media (min-width: $mob) {
+			height: 116px;
+		}
+
+		@media (min-width: 1058px) {
+			display: none;
+		}
+	}
+
+	&__slider .swiper-wrapper {
+		display: flex;
+	}
+}

@@ -1,0 +1,32 @@
+header(class='header')
+	div.header__wrap
+		a(href="#" class="logo")
+			h1.visually-hidden Project N1 your best project ever
+			img(src="img/logo.svg" width="219" height="60" class="logo__img" alt="Логотип")
+		nav.main-nav
+			ul.main-nav__menu
+				li.main-nav__item.main-nav__item--active
+					a(href="#" class="main-nav__link")
+						|Это меню
+				li.main-nav__item
+					a(href="#" class="main-nav__link")
+						|Должно
+				li.main-nav__item
+					a(href="#" class="main-nav__link")
+						|Быть
+				li.main-nav__item
+					a(href="#" class="main-nav__link")
+						|Закрепленным
+				li.main-nav__item
+					a(href="#" class="main-nav__link")
+						|При скролле
+		button(type="button" class="button button--mob-short modal-btn")
+			|#{headerBtnText || 'кнопочка'}
+			svg(width="20" height="20" class="button__symbol")
+				use(xlink:href="#finger-click")
+		a(href="#" class="header__nav-btn")
+			|Меню
+			svg(width="35" height="24" class="header__nav-symbol header__nav-symbol--burger")
+				use(xlink:href="#burger")
+			svg(width="24" height="24" class="header__nav-symbol header__nav-symbol--cross")
+				use(xlink:href="#cross")

@@ -1,0 +1,64 @@
+.chart-pie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	width: 100px;
+	height: 100px;
+	
+    @media (min-width: $mob) {
+		width: 120px;
+		height: 120px;
+	}
+
+	.chart-pie__pie {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		clip: rect(0, 100px, 100px, 50px);
+	
+		@media (min-width: $mob) {
+			clip: rect(0, 120px, 120px, 60px);
+		}
+
+		.chart-pie__half-circle {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			clip: rect(0, 50px, 100px, 0);
+
+			@media (min-width: $mob) {
+				clip: rect(0, 60px, 120px, 0);
+			}
+		}
+	}
+
+	&--years {
+		@include draw-progress(75, #c790f8);
+	}
+	
+	&--projects {
+		@include draw-progress(60, #fdc35f);
+	}
+
+	&--years .chart-pie__pie .chart-pie__half-circle {
+		border: 4px solid #c790f8;
+	}
+	
+	&--projects .chart-pie__pie .chart-pie__half-circle {
+		border: 4px solid #fdc35f;
+	}
+
+	.chart-pie__shadow {
+		width: 100%;
+		height: 100%;
+		border: 4px solid #293d55;
+		border-radius: 50%;
+	}
+}
+	  
